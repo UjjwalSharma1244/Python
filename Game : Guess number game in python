@@ -1,0 +1,30 @@
+import random
+
+def Guess(x,count):
+	print("\n\t you Have only 4 attemt to gussing the number\n	")
+		
+	while(count < 4):
+		count+= 1
+		guess =  int(input("Pls guess any number in your {} attempt".format(count)))
+		if(x == guess):
+			print("Congraulation You Won")
+			break
+			
+		elif(x > guess):
+			print("try again !! You Guess To small... :)")
+			
+		elif(x < guess):
+			print("Oops! try Again !! You guess To large... :)")
+			
+	if(count >=4):
+		print("\nThe number is %d"%x)
+		print("Better luck next Time")
+	
+lower = int(input("Enter small number"))
+upper = int(input("Enter Large number"))
+
+x = random.randint(lower, upper)
+
+count = 0
+
+number = Guess(x,count)

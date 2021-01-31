@@ -1,9 +1,9 @@
-import random
+import random  #importing random 
 
 def Guess(x,count):
 	print("\n\t you Have only 4 attemt to gussing the number\n	")
 		
-	while(count < 4):
+	while(count < 4): # loop for count to check count value is less than 4 or not
 		count+= 1
 		guess =  int(input("Pls guess any number in your {} attempt".format(count)))
 		if(x == guess):
@@ -16,15 +16,15 @@ def Guess(x,count):
 		elif(x < guess):
 			print("Oops! try Again !! You guess To large... :)")
 			
-	if(count >=4):
+	if(count >=4):  #if user can't find the right value in 4 attempt so line print better luck next time
 		print("\nThe number is %d"%x)
 		print("Better luck next Time")
 	
 lower = int(input("Enter small number"))
 upper = int(input("Enter Large number"))
 
-x = random.randint(lower, upper)
+x = random.randint(lower, upper) #to find one random int value between the range of lower to upper
 
-count = 0
+count = 0 
 
-number = Guess(x,count)
+number = Guess(x,count) #calling Guess class

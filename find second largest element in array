@@ -1,0 +1,31 @@
+# Find second largest elements in array
+def largest(arr,n): # to find the largest value in array so we can easily check the second largest value
+    largest = 0 #initialize largest as zero in starting
+    for i in range(0,n):
+        if arr[i] > largest: # it check if i value of array is greater the lagest value so it replace the largest value with i value
+            largest = arr[i]
+    return largest # when for loop is finish then it return largest value
+    
+def second_largest(arr,n):
+    great = largest(arr,n) # calling largest funtion and fetch the value of largest element in array
+    res = -1 
+    for i in range(0,n):
+        if arr[i] != great: # if this codition is true so our res value is updated i next few line
+            if res == -1:
+                res = arr[i]
+            elif arr[i] > res:
+                res = arr[i]
+
+    return res
+    
+arr = [10,10,20,15,30]
+n = len(arr) # to check length of array
+if n==0:
+    print("Array is emepty") #check if array is empty so we don't call the function
+else:
+    large = second_largest(arr,n)
+    if large == -1: # if all elements in array are same so the function is returing -1 and print it
+        print("no second large element in array")
+    else:
+        print("Second largest element in array is {}".format(large))
+

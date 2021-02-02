@@ -1,0 +1,27 @@
+import sys # import system module to use the max size 
+def minimum_distance(arr,n,x,y): # define function
+    p = -1 # declare p as 1
+    min_dist = sys.maxsize # define maxsize value in system maxsize
+    for i in range(0,n): 
+        if(arr[i] == x or arr[i] == y): # check which condition is satisfied if any one is true then it go to next line
+            if(p != -1 and arr[i] != arr[p]): #if both condition are satisfied then it goto next line(8)
+                min_dist = min(min_dist,i-p) # check which value is minimum in between min_dist and (i-p)
+            p = i # initilize p value as i
+
+    if(min_dist == sys.maxsize): # check if min_dist value is equal to sys.maxsize value then it return -1
+        return -1
+    else:
+        return min_dist
+
+arr = [3,6,5,4,5,4,5,4,3]
+n = len(arr)
+x = 3
+y = 6
+if arr == []: #check array is null or not before calling function
+    print("Array is empty")
+else:
+    distance = minimum_distance(arr,n,x,y) #calling minimum_distance function
+    if distance == -1: #if distace is equal to -1 according to line 11
+        print("all elements are similar in array")
+    else:
+        print("minimum distance in between {} and {} is {}".format(x,y,distance)) #format are repalce 1st{} to x, 2nd{} to y and 3rd {] to distance

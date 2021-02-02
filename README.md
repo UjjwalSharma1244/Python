@@ -7,4 +7,4 @@ Some Python Programmes to enjoy with Python
 
 a). Find Second largest elements in array with explanation
 
-b). Find Minimum distance between two elements
+b). Find Minimum distance between two elements in array using python with explanation

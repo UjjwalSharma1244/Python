@@ -10,3 +10,5 @@ a). Find Second largest elements in array with explanation
 b). Find Minimum distance between two elements in array using python with explanation
 
 c). Find majority elements in array in python
+
+d). Find a Fixed Point (Value equal to index) in a given array in Python

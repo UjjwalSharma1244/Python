@@ -1,0 +1,16 @@
+#find the transition Point in a binary array
+
+def transition(arr,n):
+    for i in range(0,n):
+        if arr[i] == 1:
+            return i
+    return -1
+
+arr = [0,0,0,1,1]
+n = len(arr)
+
+p = transition(arr,n)
+if p >= 0:
+    print("Transition point is ", p)
+else:
+    print("No transition point")

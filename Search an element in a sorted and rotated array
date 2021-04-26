@@ -1,0 +1,24 @@
+def searchelement(arr,l,h,key):
+    if l > h:
+        return -1
+
+    mid = int((l+h)//2)
+    if arr[mid] == key:
+        return mid
+
+    if arr[l] <= arr[mid]:
+        if arr[l] <= key and arr[mid] >= key:
+            return searchelement(arr,l,mid-1,key)
+        return searchelement(arr,mid+1,h,key) 
+
+    if arr[h] >= key and arr[mid] <= key:
+        return searchelement(arr,mid+1, h,key)
+    return searchelement(arr,l,mid-1,key)
+
+arr = [4, 5, 6, 7, 8, 9, 1, 2, 3]
+key = 6
+i = searchelement(arr, 0, len(arr)-1, key)
+if i != -1:
+    print ("Index: {}".format(i))
+else:
+    print ("Key not found")

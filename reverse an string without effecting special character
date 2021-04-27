@@ -1,0 +1,17 @@
+def reverse(str):
+    index = -1
+    for i in range(len(str)-1, int(len(str)/2),-1):
+        if str[i].isalpha():
+            temp = str[i]
+            while True:
+                index += 1
+                if str[index].isalpha():
+                    str[i] = str[index]
+                    str[index] = temp
+                    break
+    return str
+            
+str = "a!!!b.c.d,e'f,ghi"
+print("str is",str)
+string = reverse(list(str))
+print ("Output string: ", "".join(string))

@@ -1,5 +1,5 @@
 # Python
-Some Python Programmes to enjoy with Python
+Python programmes based on DSA (Data structure and algorithms)
 
 https://github.com/UjjwalSharma1244/Python
 

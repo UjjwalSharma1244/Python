@@ -1,0 +1,24 @@
+def sell_profit(price, n):
+    i = 0
+    while(i<n-1):
+        while(i<(n-1) and price[i+1] <= price[i]): # we check if next price i less so we use next price because we need minimum buy price.
+            i += 1
+
+        if i == n-1:
+            break
+
+        buy = i 
+        i += 1
+
+        while(i<(n) and price[i] >= price[i-1]): """we check if previous price is less than our current price so we increment price and 
+                                                    again check it previous price because we need maximum profit for selling."""
+            i += 1
+            i += 1
+
+        sell = i-1
+
+        print("buy on the day : {} , sell on the day : {}" . format(buy,sell))
+
+price = [100,180,260,310,40,565,656]
+n = len(price)
+sell_profit(price,n)

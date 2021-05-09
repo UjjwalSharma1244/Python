@@ -14,3 +14,22 @@ def product(arr,n):
 arr = [1,4,3,6,7,0]
 n = len(arr)
 product(arr,n)
+
+# Method 2 , using sorting And time complexity is O(nlogn)
+
+def product(arr,n):
+    if (n<2):
+        print("no pair exist")
+        return
+
+    arr.sort()
+    sum1 = arr[0] * arr[1]
+    sum2 = arr[n-2] * arr[n-1]
+    if sum1 > sum2 :
+        print("maximum pair is :{} & {}".format(arr[0],arr[1]))
+    else:
+        print("Maximum pair is : {} & {}".format(arr[n-2],arr[n-1]))
+
+arr = [1,8,3,6,7,0]
+n = len(arr)
+product(arr, n)

@@ -1,0 +1,72 @@
+# Searching using Binary search, Time compalexity O(logn) 
+
+def searching(arr,low,high,key):
+    if high <= low:
+        return -1
+
+    mid = int((low+high)/2)
+    if arr[mid] == key:
+        return mid
+    elif arr[mid] > key:
+        return searching(arr, low, mid-1, key)
+
+    else:
+        return searching(arr, mid+1, high, key)
+
+arr = [1,2,3,5,10,20]
+key = 5
+search = searching(arr, 0, len(arr), key)
+print("Index :",search)
+
+# Insertion, Time complexity O(n)
+
+def Insertion(arr,n,key):
+    if (n >= capacity):
+        return n
+    i = n-1
+    while i >=0 and arr[i] > key:
+        arr[i+1] = arr[i]
+        i -= 1
+    arr[i+1] = key
+
+    return(n+1)
+arr = [12,15,16,20,50,70]
+for i in range(20):
+    arr.append(0)
+capacity = len(arr)
+n = 6
+#n = len(arr)
+key = 26
+n = Insertion(arr, n, key)
+for i in range(n):
+    print(arr[i],end=' ')
+
+
+# Deletion , Time Complexity O(n)
+
+def deletion(arr,n,key):
+    pos = search(arr,0,n-1,key)
+    if pos == -1:
+        return -1
+    for i in range(pos,n-1):
+        arr[i] = arr[i+1]
+    return(n-1)
+
+
+def search(arr,low,high,key):
+    if high < low:
+        return -1
+    mid = int((low+high)/2)
+    if arr[mid] == key:
+        return mid
+    elif arr[mid] > key:
+        return search(arr, low, mid-1, key)
+    else:
+        return search(arr, mid+1, high, key)
+
+arr = [10,20,30,40,50]
+n = len(arr)
+key = 30
+new_arr = deletion(arr, n, key)
+for i in range(new_arr):
+    print(arr[i],end = ' ')

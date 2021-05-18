@@ -9,3 +9,4 @@ for i in range(len(list)):
 
 if (4 in list):
     print("element exits")
+    

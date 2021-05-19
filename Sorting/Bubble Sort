@@ -1,0 +1,13 @@
+# Time complexity O(n*n) & in best case O(n)
+
+def bubble_sort(arr,n):
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1],arr[j]
+
+arr = [12,13,15,35,20,10,18,24,40]
+n = len(arr)
+bubble_sort(arr,n)
+for i in range(len(arr)):
+    print(arr[i],end = ' ')

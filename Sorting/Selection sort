@@ -1,6 +1,6 @@
 # Selection sorting
 
-def insertion(arr,n):
+def selection(arr,n):
     for i in range(len(arr)):
         min_val = i
         for j in range(i+1,n):
@@ -10,6 +10,6 @@ def insertion(arr,n):
 
 arr = [12,24,10,5,25]
 n = len(arr)
-insertion(arr,n)
+selection(arr,n)
 for i in range(len(arr)):
     print(arr[i],end=' ')

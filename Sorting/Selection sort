@@ -1,4 +1,4 @@
-# Insertion sorting
+# Selection sorting
 
 def insertion(arr,n):
     for i in range(len(arr)):

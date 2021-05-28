@@ -1,0 +1,15 @@
+# Time Complexity: O(M*N) where M and N are sizes of given arrays
+
+def pair(x,y,m,n):
+    ans = 0
+    for i in range(n):
+        for j in range(m):
+            if pow(x[i],y[j]) > pow(y[j],x[i]):
+                ans += 1
+    return ans
+
+x = [1,2,3,4,1]
+y = [4,5,1,3,2]
+n = len(x)
+m = len(y)
+print(pair(x,y,m,n))

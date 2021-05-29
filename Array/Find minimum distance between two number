@@ -1,3 +1,22 @@
+# Method 1 
+
+def minimum_distance(arr, n,x,y):
+    min_dist = 9999999
+    for i in range(n):
+        for j in range(i+1,n):
+            if min_dist > abs(i-j) and ((x == arr[i] and y == arr[j]) or (y == arr[i] and x == arr[j])):
+                min_dist = abs(i-j)
+    return min_dist
+
+arr = [3,5,4,2,6,5,6,6,5,3,4,8,4]
+n = len(arr)
+x = 3
+y = 6
+distance = minimum_distance(arr,n,x,y)
+print(distance)
+
+# Method 2
+
 import sys # import system module to use the max size 
 def minimum_distance(arr,n,x,y): # define function
     p = -1 # declare p as 1

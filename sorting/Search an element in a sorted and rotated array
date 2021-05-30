@@ -1,4 +1,4 @@
-def searchelement(arr,l,h,key):
+def searchelement(arr,l,h,key): # l= low, h = high
     if l > h:
         return -1
 

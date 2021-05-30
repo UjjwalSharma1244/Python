@@ -1,0 +1,20 @@
+class Node:
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+		
+class Linkedlist:
+	def __init__(self): # function to initialize head
+		self.head = None
+		
+if __name__ == '__main__': # code execution starts here
+	llist = Linkedlist() # Starts With the empty list
+	
+	llist.head = Node(1)
+	second = Node(2)
+	third = Node(3)
+	
+  # link each node to eachother
+  
+	llist.head.next = second
+	second.next = third

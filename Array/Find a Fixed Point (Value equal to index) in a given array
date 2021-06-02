@@ -1,3 +1,5 @@
+# Fixed Point (Value same at index value)
+
 # Method 1
 
 def fixed_point(arr,n):

@@ -22,3 +22,20 @@ def anagram(str1,str2):
 s1 = "ujjwalsharma"
 s2 = "lawjjuamrahs"
 print(anagram(s1,s2))
+
+
+'''Explaination :
+
+Here two sting are present if you want so you can also take as input from user using input method. anagram is a function where both string are passed as argument.
+first of all we initilize the value of character as 256 because In the following implementation, it is assumed that the characters are stored using 8 bit and 
+there can be 256 possible characters. then we create a 256 size of array for both strings. 
+In First for loop(Line : 8) we check the all single string unicode value using ord() function. and store the value at that index using count[ord(i)] += 1 because the all index 
+in count are 0 so the updates value is one in that index. if same string is present 2 or more time then there value is updated.
+we follow this step in both string and create a new array called count1 and count2.
+
+here is one thing is also important if len of both string are not same so it's not anagram
+
+So now we check the both arrayy count1 and count2(Line : 18) if both values are same then the stirngs are also same so we can say that string is anagram.
+if not so it's not anagram'''
+
+'''if you face any problem fill free to ask me @ujjwalsha768gmail.com'''

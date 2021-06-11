@@ -1,0 +1,24 @@
+# Check two Strings are Anagram or Not
+
+def anagram(str1,str2):
+    character = 256
+    count1 = [0] * character
+    count2 = [0] * character
+
+    for i in str1:
+        count1[ord(i)] += 1
+
+    for j in str2:
+        count2[ord(j)] += 1
+
+    if len(str1) != len(str2):
+        return "No its Not anagram"
+
+    for i in range(character):
+        if count1[i] != count2[i]:
+            return "No its Not anagram"
+    return "Yes its anagram"
+
+s1 = "ujjwalsharma"
+s2 = "lawjjuamrahs"
+print(anagram(s1,s2))
